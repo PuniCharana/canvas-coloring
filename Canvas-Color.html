@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas Coloring</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<meta name="description" content="Canvas drawing board with HTML, CSS and Javascript">
+	<meta name="keywords" content="HTML, CSS, JavaScript, Canvas, Drawing, Color">
+	<meta name="author" content="Puni Charana">
+</head>
+<body onresize="resizeCanvas()">
+	<div id="toolbar">
+		<table>
+			<tr>
+				<td>
+					<select id="bsize" onchange="setRadius(this.value)">
+						<option value="3"selected disabled>Brush</option>
+						<option value="0.5">0.5</option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+						<option value="6">6</option>
+						<option value="7">7</option>
+						<option value="8">8</option>
+						<option value="9">9</option>
+						<option value="10">10</option>
+						<option value="15">15</option>
+						<option value="20">20</option>
+						<option value="25">25</option>
+						<option value="30">30</option>
+					</select>
+				</td>
+				<td><div id="green" class="color" onclick="color(this); toggleClass(this);"></div></td>
+				<td><div id="red" class="color" onclick="color(this); toggleClass(this);"></div></td>	
+				<td><div id="blue" class="color" onclick="color(this); toggleClass(this);"></div></td>	
+				<td><div id="yellow" class="color" onclick="color(this); toggleClass(this);"></div></td>	
+				<td><div id="brown" class="color" onclick="color(this); toggleClass(this);"></div></td>	
+				<td><div id="black" class="color active" onclick="color(this); toggleClass(this);"></div></td>	
+				<td><div id="magenta" class="color" onclick="color(this); toggleClass(this);"></div></td>	
+				<td><div id="cyan" class="color" onclick="color(this); toggleClass(this);"></div></td>
+				<td><div id="chocolate" class="color" onclick="color(this); toggleClass(this);"></div></td>
+				<td><div id="darkGray" class="color" onclick="color(this); toggleClass(this);"></div></td>
+				<td><div id="deepPink" class="color" onclick="color(this); toggleClass(this);"></div></td>
+				<td><div id="lawnGreen" class="color" onclick="color(this); toggleClass(this);"></div></td>
+				<td><div id="navy" class="color" onclick="color(this); toggleClass(this);"></div></td>
+				<td><div id="tomato" class="color" onclick="color(this); toggleClass(this);"></div></td>
+				<td><div id="gold" class="color" onclick="color(this); toggleClass(this);"></div></td>
+
+				<td><div id="white" class="btn" onclick="color(this)">Erase</div></td>
+				<td><div id="clear" class="btn" onclick="clearAll()">Clear</div></td>
+				<td><div id="save" class="btn" onclick="save()">Save</div></td>
+			</tr>
+		</table>
+	</div>
+	<canvas id="myCanvas">
+	</canvas>
+<script type="text/javascript" src="script/color-script.js"></script>
+</body>
+</html>
