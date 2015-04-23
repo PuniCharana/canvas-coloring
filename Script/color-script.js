@@ -22,8 +22,8 @@ var putPoint = function (e) {
 	}
 }
 var engaged = function(e){
-	dragging = true;
-	putPoint(e);
+    dragging = true;
+    putPoint(e);
 }
 var release = function(){
 	dragging = false;
@@ -111,9 +111,13 @@ function erase(){
 	context.strokeStyle = "white";
 }
 function resizeCanvas(){
+    var imgData = context.getImageData(0, 0, canvas.width, canvas.height);
 	//Resize the canvas size
 	canvas.width = window.innerWidth;
 	canvas.height = window.innerHeight;
+    document.getElementById('myCanvas').getContext("2d").putImageData(imgData,0,0);
+    //reset the radius
+    setRadius(document.getElementById("bsize").value);
 }
 function toggleClass(e){
 	//Unset all active class
